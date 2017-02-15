@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""This script gets necessary inputs from the user to generate a
+randomized password"""
 
 import os
 
@@ -162,6 +164,11 @@ def create_file(file_name, site, user_name, password):
 
 
 def main():
+    """Gets inputs from the user and puts contents into a file
+
+    Gets the site name, username from the user. Generates a randomized
+    password. Puts the site name, user name and password into a file.
+    """
     # get user info
     site = input("Enter the account password to be generated for: ")
     user_name = input("Enter your username: ")
