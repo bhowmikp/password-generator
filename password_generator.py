@@ -130,8 +130,7 @@ def generate_password(length=30, upper_case=True,
     try:
         password_length_checker(length)
     except LengthError:
-        return 'Password length invalid. Password must be between' \
-               '6 and 40 characters'
+        return 'Password length must be between 6 and 40 characters'
 
     while counter < length:
         # gets os to generate rand numbers for more randomized generation
@@ -145,16 +144,16 @@ def generate_password(length=30, upper_case=True,
     return password
 
 
-def create_file(file_name, site, user_name, password):
+def create_file(site, user_name, password, file_name = FILE_NAME):
     """Creates a file info containing site name, user name and password
 
     Args:
-        file_name: String containing the name of the file that will hold
-            the information
         site: String containing the name of the site the username and
             password is for
         user_name: the user name for the site
         password: the password for the site
+        file_name: String containing the name of the file that will hold
+            the information. Deafault = FILE_NAME
     """
     # create file with the info
     file = open(file_name, 'a')
@@ -175,7 +174,7 @@ def main():
     # get password
     password = generate_password()
     # store user info in a file
-    create_file(FILE_NAME, site, user_name, password)
+    create_file(site, user_name, password, FILE_NAME)
 
 
 if __name__ == "__main__":
