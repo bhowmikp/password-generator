@@ -39,7 +39,7 @@ def password_length_checker(length):
 
 
 def find_range(upper_case, lower_case, numbers, symbols):
-    """Finds the range of characters that the user wants
+    """Finds the range of ascii characters that the user wants
 
     Finds the ascii representation of all the characters
     that the user wants to create their password out of.
@@ -58,7 +58,7 @@ def find_range(upper_case, lower_case, numbers, symbols):
         list of ints containing ascii representation of
         characters that is wanted
 
-    Raise:
+    Raises:
         ValidationError: An error occured where no type
             of character selected to make the string
     """
@@ -144,7 +144,7 @@ def generate_password(length=30, upper_case=True,
     return password
 
 
-def create_file(site, user_name, password, file_name = FILE_NAME):
+def create_file(site, user_name, password, file_name=FILE_NAME):
     """Creates a file info containing site name, user name and password
 
     Args:
@@ -158,7 +158,7 @@ def create_file(site, user_name, password, file_name = FILE_NAME):
     # create file with the info
     file = open(file_name, 'a')
     file.write(
-        site + "\nUsername: " + user_name + "\nPassowrd: " + password + "\n\n")
+        site + "\nUsername: " + user_name + "\nPassword: " + password + "\n\n")
     file.close()
 
 
