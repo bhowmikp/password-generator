@@ -1,0 +1,4 @@
+[report]
+
+omit =
+    */pasword_generator_gui.py/*
