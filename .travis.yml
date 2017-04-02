@@ -12,7 +12,7 @@ before_install:
     - pip install coveralls
 
 script: 
-    - pytest
+    - pytest --cov .
 
 after_success:
     - coveralls
