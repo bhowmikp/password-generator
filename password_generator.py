@@ -62,36 +62,30 @@ def find_range(upper_case, lower_case, numbers, symbols):
         ValidationError: An error occured where no type
             of character selected to make the string
     """
-    # sets the ascii range for uppercase letters
     if upper_case:
         upper_case_range = range(65, 90 + 1)
     else:
         upper_case_range = range(0, 0)
 
-    # sets the ascii range for lowercase letters
     if lower_case:
         lower_case_range = range(97, 122 + 1)
     else:
         lower_case_range = range(0, 0)
 
-    # sets the ascii range for numbers
     if numbers:
         numbers_range = range(48, 57 + 1)
     else:
         numbers_range = range(0, 0)
 
-    # sets the ascii range for symbols
     if symbols:
         symbols_range = list(range(33, 47 + 1)) + list(range(58, 64 + 1)) + \
             list(range(91, 96 + 1)) + list(range(123, 126 + 1))
     else:
         symbols_range = range(0, 0)
 
-    # finds the range of letters accepted by the user
     total_range = list(upper_case_range) + list(lower_case_range) + \
         list(numbers_range) + list(symbols_range)
 
-    # if no range selected by user
     if list(total_range) == []:
         raise ValidationError("No character type has been selected")
 
@@ -126,7 +120,6 @@ def generate_password(length=30, upper_case=True,
     except ValidationError:
         return "Please fix settings. Password could not be generated"
 
-    # determine if the users password length is valid
     try:
         password_length_checker(length)
     except LengthError:
@@ -155,7 +148,6 @@ def create_file(site, user_name, password, file_name=FILE_NAME):
         file_name: String containing the name of the file that will hold
             the information. Deafault = FILE_NAME
     """
-    # create file with the info
     file = open(file_name, 'a')
     file.write(
         site + "\nUsername: " + user_name + "\nPassword: " + password + "\n\n")
@@ -168,12 +160,9 @@ def main():
     Gets the site name, username from the user. Generates a randomized
     password. Puts the site name, user name and password into a file.
     """
-    # get user info
     site = input("Enter the account password to be generated for: ")
     user_name = input("Enter your username: ")
-    # get password
     password = generate_password()
-    # store user info in a file
     create_file(site, user_name, password, FILE_NAME)
 
 
