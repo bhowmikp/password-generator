@@ -49,7 +49,7 @@ python3 password_generator_gui.py
 ### Create exe
 ```
 pip3 install pyinstaller
-pyinstaller -F -w password_generator_gui.py
+pyinstaller -F -w password_generator_gui.py -i password_generator_gui.exe
 ```
 
 ## Authors
