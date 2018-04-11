@@ -46,6 +46,12 @@ pylint [filename].py
 python3 password_generator_gui.py
 ```
 
+### Create exe
+```
+pip3 install pyinstaller
+pyinstaller -F -w password_generator_gui.py
+```
+
 ## Authors
 
 * **Prantar Bhowmik** - *Initial work* - [bhowmikp](https://github.com/bhowmikp)

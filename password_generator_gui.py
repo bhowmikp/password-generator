@@ -1,3 +1,5 @@
+# password_generator_gui.py
+
 '''Makes gui for password generator'''
 
 try:
