@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bhowmikp/Password_Generator.svg?branch=master)](https://travis-ci.org/bhowmikp/Password_Generator)[![Coverage Status](https://coveralls.io/repos/github/bhowmikp/Password_Generator/badge.svg?branch=master)](https://coveralls.io/github/bhowmikp/Password_Generator?branch=master)
+[![Build Status](https://travis-ci.org/bhowmikp/password-generator.svg?branch=master)](https://travis-ci.org/bhowmikp/password-generator)[![Coverage Status](https://coveralls.io/repos/github/bhowmikp/password-generator/badge.svg?branch=master)](https://coveralls.io/github/bhowmikp/password-generator?branch=master)
 
 # Password Generator
 
