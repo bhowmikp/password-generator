@@ -11,7 +11,7 @@ before_install:
     - pip install pytest pytest-cov
     - pip install coveralls
 
-script: 
+script:
     - python3 -m pytest --cov-report term-missing --doctest-modules --cov=.
 
 after_success:
