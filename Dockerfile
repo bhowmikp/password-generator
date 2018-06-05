@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y python3-pip
 
-RUN pip3 install pytest pytest-cov coveralls
+RUN pip3 install pytest
 
 # Adding the whole repository to the image
 COPY . ./
