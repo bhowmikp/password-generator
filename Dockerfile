@@ -13,4 +13,4 @@ RUN pip3 install pytest pytest-cov coveralls
 # Adding the whole repository to the image
 COPY . ./
 
-CMD ["python3", "-m", "pytest", "--cov-report", "term-missing", "--doctest-modules", "--cov=."]
+CMD ["python3", "-m", "pytest"]
