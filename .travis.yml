@@ -13,8 +13,8 @@ services:
   - docker
 
 install:
-  - docker build -t bhowmikp/password-generator .
-  - docker run bhowmikp/password-generator
+  - docker pull bhowmikp/password-generator 
+  - docker run bhowmikp/password-generator /bin/sh -c "python3 -m pytest --cov-report term-missing --doctest-modules --cov=."
 
 script:
   - python3 -m pytest --cov-report term-missing --doctest-modules --cov=.
