@@ -1,3 +1,5 @@
+sudo: required
+
 language: python
 python:
   - "3.5"
@@ -7,12 +9,17 @@ python:
   - "3.7-dev" # 3.7 development branch
   - "nightly" # currently points to 3.7-dev
 
-before_install:
-    - pip install pytest pytest-cov
-    - pip install coveralls
+services:
+  - docker
+
+install:
+  - docker build -t bhowmikp/password-generator .
+
+before_script:
+  - pip3 install pytest pytest-cov coveralls
 
 script:
-    - python3 -m pytest --cov-report term-missing --doctest-modules --cov=.
+  - python3 -m pytest --cov-report term-missing --doctest-modules --cov=.
 
 after_success:
-    - coveralls
+  - coveralls
