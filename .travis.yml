@@ -14,9 +14,7 @@ services:
 
 install:
   - docker build -t bhowmikp/password-generator .
-
-before_script:
-  - pip3 install pytest pytest-cov coveralls
+  - docker run bhowmikp/password-generator
 
 script:
   - python3 -m pytest --cov-report term-missing --doctest-modules --cov=.
